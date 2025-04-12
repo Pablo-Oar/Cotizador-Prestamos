@@ -1,6 +1,7 @@
 import Header from "./components/Header"
 import { useState } from "react"
 import Button from "./components/Button";
+import {formatearDinero} from  "./components/helpers/"
 
 function App() {
   const [cantidad, setCantidad] = useState(10000);
@@ -59,7 +60,9 @@ function App() {
         value={cantidad}
       />
 
-      <p className="text-center my-10 text-5xl font-extrabold text-indigo-600"s>{cantidad}</p>
+      <p className="text-center my-10 text-5xl font-extrabold text-indigo-600"s>
+        {formatearDinero(cantidad)}
+      </p>
       
     </div>
   )
